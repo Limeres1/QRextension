@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Qr Extension",
+    "version": "0.0.1",
+    "description": "My own Qr extension for web pages.",
+    "icons": {
+        "16": "images/iconx16.png",
+        "48": "images/iconx48.png",
+        "128": "images/iconx128.png"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "images/iconx16.png",
+            "48": "images/iconx48.png",
+            "128": "images/iconx128.png"
+        }
+    }
+}
