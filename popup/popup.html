@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    Hello World!
+    <div class="container">
+        <!-- QR Code Image -->
+        <img class="qr-image" src="qr-placeholder.png" alt="QR Code">
+
+        <!-- Hyperlink -->
+        <a class="hyperlink" href="https://example.com" target="_blank">https://example.com</a>
+
+        <!-- Actions -->
+        <div class="actions">
+            <!-- Send to Email -->
+            <div class="send-email">
+                <input type="email" id="email" placeholder="sendtoemail@email.com">
+                <button id="send-button">SEND</button>
+            </div>
+
+            <!-- Download Button -->
+            <button id="download-button">Download</button>
+        </div>
 </body>
 
 </html>
