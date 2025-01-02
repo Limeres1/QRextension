@@ -8,13 +8,14 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #030000;
+    width: 100%;
 }
 
 .container {
     text-align: center;
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     margin: auto;
 }
 
