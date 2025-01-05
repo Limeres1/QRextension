@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="../scripts/popup.js"></script>
 </head>
 
 <body>
     <div class="container">
         <!-- QR Code Image -->
-        <img class="qr-image" src="qr-placeholder.png" alt="QR Code">
+        <img class="qr-image" id="qrCode">
+
+        <button id="qrCodeButton">Generate</button>
 
         <!-- Hyperlink -->
-        <a class="hyperlink" href="https://example.com" target="_blank">https://example.com</a>
+        <a class="hyperlink" id="currentUrl">https://example.com</a>
 
         <!-- Actions -->
         <div class="actions">
@@ -25,6 +28,9 @@
             <!-- Download Button -->
             <button id="download-button">Download</button>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.4.4/qrcode.js"
+            integrity="sha512-oxrVyBhqnzQ0BzuM0A/6dEIk0alz0p4SpDRaWvtuUoarIc8rnL5lVniHG5Dp21MRFojcQcmKHjaskNXhSaUPPw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
