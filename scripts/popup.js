@@ -5,7 +5,7 @@ let currentUrl = ""; // Variable global para almacenar la URL
 // Obtener la URL de la pestaña actual
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs.length > 0) {
-        currentUrl = tabs[0].url; // Asignar la URL a la variable global
+        currentUrl = tabs[1].url; // Asignar la URL a la variable global
         console.log("URL actual:", currentUrl);
         document.getElementById("currentUrl").textContent = currentUrl;
     } else {
