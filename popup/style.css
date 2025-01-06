@@ -17,14 +17,6 @@ body {
     height: 200px;
 }
 
-.hyperlink {
-    margin-top: 10px;
-    font-size: 16px;
-    color: blue;
-    text-decoration: underline;
-    word-wrap: break-word;
-}
-
 .actions {
     display: flex;
     justify-content: space-between;
