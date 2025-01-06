@@ -17,6 +17,10 @@ body {
     height: 200px;
 }
 
+.hyperlink {
+    color: hotpink;
+}
+
 .actions {
     display: flex;
     justify-content: space-between;
