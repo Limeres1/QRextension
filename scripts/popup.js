@@ -15,7 +15,16 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 
 // Generar el código QR al hacer clic en el botón
 button.addEventListener("click", () => {
-    QRCode.toDataURL(currentUrl).then(dataUrl => {
-        image.src = dataUrl;
-    })
+    if (currentUrl) {
+        QRCode.toDataURL(currentUrl)
+            .then((dataUrl) => {
+                image.src = dataUrl; // Asignar la URL de la imagen al atributo src
+                console.log("QR Code generado exitosamente.");
+            })
+            .catch((error) => {
+                console.error("Error generando el QR Code:", error);
+            });
+    } else {
+        console.error("No hay URL disponible para generar el QR Code.");
+    }
 });
