@@ -30,9 +30,3 @@ button.addEventListener("click", () => {
     }
 });
 */
-
-button.addEventListener("click", (qrcode(currentUrl)) => {});
-
-function qrcode(url) {
-    return image.src = urlData;
-}
