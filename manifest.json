@@ -18,8 +18,8 @@
     },
     "permissions": [
         "tabs"
-    ], // Se requiere para obtener la URL de la pestaña actual
+    ],
     "host_permissions": [
         "<all_urls>"
-    ] // Para trabajar con cualquier URL
+    ]
 }
