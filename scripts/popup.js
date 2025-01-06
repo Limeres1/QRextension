@@ -2,7 +2,7 @@ const button = document.getElementById("qrCodeButton");
 const image = document.getElementById("qrCode");
 let currentUrl = ""; // Variable global para almacenar la URL
 
-// Obtener la URL de la pestaña actual
+//URL de la pestaña actual
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs.length > 0) {
         currentUrl = tabs[0].url; // Asignar la URL a la variable global
@@ -13,7 +13,8 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     }
 });
 
-// Generar el código QR al hacer clic en el botón
+
+/*
 button.addEventListener("click", () => {
     if (currentUrl) {
         QRCode.toDataURL(currentUrl)
@@ -28,3 +29,10 @@ button.addEventListener("click", () => {
         console.error("No hay URL disponible para generar el QR Code.");
     }
 });
+*/
+
+button.addEventListener("click", (qrcode(currentUrl)) => {});
+
+function qrcode(url) {
+    return image.src = urlData;
+}
