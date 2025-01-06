@@ -8,7 +8,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     document.getElementById('currentUrl').textContent = currentUrl;
 });
 
-buutton.addEventListener("click", () => {
+button.addEventListener("click", () => {
     QRCode.toDataURL(currentUrl).then(dataUrl => {
         image.scr = dataUrl;
     })
