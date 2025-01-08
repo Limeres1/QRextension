@@ -31,4 +31,11 @@ button.addEventListener("click", () => {
 });
 */
 
-new QRCode(document.getElementById("qrcode"), "https://www.youtube.com/m");
+const qrcode = new QRCode(document.getElementById('qrcode'), {
+    text: 'https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js',
+    width: 128,
+    height: 128,
+    colorDark: '#000',
+    colorLight: '#fff',
+    correctLevel: QRCode.CorrectLevel.H
+});
