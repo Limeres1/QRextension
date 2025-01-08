@@ -31,4 +31,4 @@ button.addEventListener("click", () => {
 });
 */
 
-new QRCode(document.getElementById("qrcode"), currentUrl);
+new QRCode(document.getElementById("qrcode"), "https://www.youtube.com/m");
