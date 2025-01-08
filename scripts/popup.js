@@ -30,3 +30,5 @@ button.addEventListener("click", () => {
     }
 });
 */
+
+new QRCode(document.getElementById("qrcode"), currentUrl);
