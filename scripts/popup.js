@@ -1,4 +1,5 @@
 const button = document.getElementById("qrCodeButton");
+const copyButton = document.getElementById("copyButton")
 const image = document.getElementById("qrCode");
 let currentUrl = ""; // Variable global para almacenar la URL
 
@@ -38,4 +39,8 @@ const qrcode = new QRCode(document.getElementById('qrcode'), {
     colorDark: '#000',
     colorLight: '#fff',
     correctLevel: QRCode.CorrectLevel.H
+});
+
+copyButton.addEventListener("click", () => {
+
 });
