@@ -2,6 +2,7 @@ const button = document.getElementById("qrCodeButton");
 const copyButton = document.getElementById("copyButton")
 const image = document.getElementById("qrCode");
 let currentUrl = ""; // Variable global para almacenar la URL
+const currentUrlElement = document.getElementById("currentUrl");
 
 //URL de la pestaña actual
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -42,5 +43,16 @@ const qrcode = new QRCode(document.getElementById('qrcode'), {
 });
 
 copyButton.addEventListener("click", () => {
+    const textToCopy = currentUrlElement.textContent; //Obtiene el elemento del tag <a>
 
+    // API Clipboard para copiar el texto.
+
+    navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+            console.log("Texto copiado al portapapeles:", textToCopy);
+            alert("¡Texto copiado al portapapeles!");
+        })
+        .catch((err) => {
+            console.error("Error al copiar el texto:", err);
+        });
 });
