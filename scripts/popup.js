@@ -32,7 +32,7 @@ copyButton.addEventListener("click", () => {
 
 button.addEventListener("click", () => {
     const textToCopy = currentUrlElement.textContent;
-    QrCode.toDataURL(textToCopy)
+    QRCode.toDataURL(textToCopy)
         .then((dataUrl) => {
             image.src = dataUrl;
         })
