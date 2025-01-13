@@ -29,3 +29,12 @@ copyButton.addEventListener("click", () => {
             console.error("Error al copiar el texto:", err);
         });
 });
+
+button.addEventListener("click", () => {
+    const textToCopy = currentUrlElement.textContent;
+    QRCode.toDataURL(textToCopy)
+        .then((dataUrl) => {
+            image.src = dataUrl;
+        })
+        .catch((err) => console.error("Error generando el QR Code:", err));
+});
