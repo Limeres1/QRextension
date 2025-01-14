@@ -3,6 +3,7 @@ const copyButton = document.getElementById("copyButton")
 const image = document.getElementById("qrCode");
 let currentUrl = ""; // Variable global para almacenar la URL
 const currentUrlElement = document.getElementById("currentUrl");
+const downloadButton = document.getElementById("download-button");
 
 //URL de la pestaña actual
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -37,4 +38,8 @@ button.addEventListener("click", () => {
             image.src = dataUrl;
         })
         .catch((err) => console.error("Error generando el QR Code:", err));
+});
+
+downloadButton.addEventListener("click", () => {
+
 });
