@@ -43,3 +43,7 @@ button.addEventListener("click", () => {
 downloadButton.addEventListener("click", () => {
 
 });
+
+image.addEventListener("click", () => {
+    window.open(image)
+});
