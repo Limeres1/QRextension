@@ -32,12 +32,10 @@ copyButton.addEventListener("click", () => {
 });
 
 button.addEventListener("click", () => {
-    const textToCopy = currentUrlElement.textContent;
-    QRCode.toDataURL(textToCopy)
-        .then((dataUrl) => {
-            image.src = dataUrl;
-        })
-        .catch((err) => console.error("Error generando el QR Code:", err));
+    QRCode.toDataURL(currentUrl).then((dataURL) => {
+        image.src = dataURL;
+    })
+        .catch((err) => console.error("Error al generar codigo QR", err));
 });
 
 downloadButton.addEventListener("click", () => {
