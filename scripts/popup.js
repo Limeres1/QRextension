@@ -45,3 +45,5 @@ downloadButton.addEventListener("click", () => {
 image.addEventListener("click", () => {
     window.open()
 });
+
+console.log(QRCode);
