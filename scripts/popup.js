@@ -45,5 +45,6 @@ downloadButton.addEventListener("click", () => {
 });
 
 image.addEventListener("click", () => {
-    window.open(document.getElementById("qrCode"))
+    const qrCodeUrl = image.href;
+    window.open(qrCodeUrl)
 });
