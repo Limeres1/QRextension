@@ -1,6 +1,7 @@
 const button = document.getElementById("qrCodeButton");
 const copyButton = document.getElementById("copyButton")
-const image = document.getElementById("qrCode");
+const qrImage = document.getElementById("qrImage");
+const qrBox = document.getElementById("qrBox");
 let currentUrl = ""; // Variable global para almacenar la URL
 const currentUrlElement = document.getElementById("currentUrl");
 const downloadButton = document.getElementById("download-button");
@@ -31,19 +32,10 @@ copyButton.addEventListener("click", () => {
         });
 });
 
-button.addEventListener("click", () => {
-    QRCode.toDataURL(currentUrl).then((dataURL) => {
-        image.src = dataURL;
-    })
-        .catch((err) => console.error("Error al generar codigo QR", err));
-});
 
 downloadButton.addEventListener("click", () => {
-
 });
 
-image.addEventListener("click", () => {
-    window.open()
-});
-
-console.log(QRCode);
+function generateQR() {
+    qrimage.src = "api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + currentUrl.valuel;
+}
