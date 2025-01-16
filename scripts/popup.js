@@ -37,5 +37,5 @@ button.addEventListener("click", generateQR);
 
 function generateQR() {
     qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=youtube.com"
-    QrBox.classList.add("show-img");
+    qrBox.classList.add("show-img");
 }
