@@ -36,6 +36,6 @@ copyButton.addEventListener("click", () => {
 button.addEventListener("click", generateQR);
 
 function generateQR() {
-    qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=youtube.com"
+    qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + currentUrl.value;
     qrBox.classList.add("show-img");
 }
