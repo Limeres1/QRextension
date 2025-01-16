@@ -33,9 +33,9 @@ copyButton.addEventListener("click", () => {
 });
 
 
-downloadButton.addEventListener("click", () => {
-});
+downloadButton.addEventListener("click", generateQR);
 
 function generateQR() {
-    qrimage.src = "api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + currentUrl.valuel;
+    const qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(currentUrl.value);
+    qrimage.src = qrCodeUrl;
 }
