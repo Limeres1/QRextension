@@ -39,3 +39,9 @@ function generateQR() {
     qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + currentUrl;
     qrBox.classList.add("show-img");
 }
+
+qrImage.addEventListener("click", openImage);
+
+function openImage() {
+    qrImage.window.open()
+}
