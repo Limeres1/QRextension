@@ -109,11 +109,3 @@ body {
     margin: 10px auto;
     border: 1px #d1d1d1
 }
-
-.hoverImage>p {
-    visibility: hidden;
-}
-
-.hoverImage:hover p {
-    visibility: visible;
-}
