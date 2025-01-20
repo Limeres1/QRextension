@@ -110,7 +110,7 @@ body {
     border: 1px #d1d1d1
 }
 
-.p {
+.hoverImage>p {
     visibility: hidden;
 }
 
