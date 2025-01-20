@@ -43,5 +43,5 @@ function generateQR() {
 qrImage.addEventListener("click", openImage);
 
 function openImage() {
-    qrImage.window.open()
+    window.open(qrImage.src)
 }
