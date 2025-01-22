@@ -56,10 +56,8 @@ downloadButton.addEventListener("click", () => {
         downloadOption();
     }
     else {
-        generateQR();
-        downloadOption();
-        console.error("No es posible descargar el Codigo QR.");
-        alert("QRCODE descargado!")
+        console.error("No es posible descargar el código QR.");
+        alert("Genera el código QR antes de su descarga.")
     }
 });
 
@@ -69,5 +67,5 @@ function downloadOption() {
     enlaceDescarga.download = "QrCode.png";
 
     enlaceDescarga.click();
-    console.log("Codigo QR descargado.")
+    console.log("Código QR descargado.")
 }
