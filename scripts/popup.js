@@ -52,12 +52,20 @@ function openImage() {
 
 
 downloadButton.addEventListener("click", () => {
-    if (!flag) {
-        generateQR();
+    if (qrImage.src && flag) {
+        downloadOption();
     }
-    downloadOption()
+    else {
+        console.error("No es posible descargar el Codigo QR.");
+        alert("Genera un codigo QR antes de su descarga.")
+    }
 });
 
 function downloadOption() {
+    const enlaceDescarga = document.createElement("a");
+    enlaceDescarga.href = qrImage.src;
+    enlaceDescarga.download = "QrCode.png";
 
+    enlaceDescarga.click();
+    console.log("Codigo QR descargado.")
 }
