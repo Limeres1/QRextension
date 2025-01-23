@@ -15,7 +15,6 @@ body {
     margin: 0 auto;
     width: 200px;
     height: 200px;
-    padding-right: 100px;
 }
 
 .hyperlink {
@@ -83,6 +82,7 @@ body {
 #QrBox img {
     width: 100%;
     padding: 10px;
+    padding-right: 15px;
 }
 
 #QrBox.show-img {
