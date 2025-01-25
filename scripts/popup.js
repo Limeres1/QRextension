@@ -13,11 +13,16 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs.length > 0) {
         currentUrl = tabs[0].url; // Asignar la URL a la variable global
         console.log("URL actual:", currentUrl);
-        document.getElementById("currentUrl").textContent = currentUrl;
+
+        // Truncar la URL si es demasiado larga
+        const truncatedUrl = truncateUrl(currentUrl, 50); // Cambia 50 por el número de caracteres máximo
+        document.getElementById("currentUrl").textContent = truncatedUrl; // Mostrar URL truncada
+        document.getElementById("currentUrl").title = currentUrl; // Muestra la URL completa al pasar el mouse
     } else {
         console.error("No se pudo obtener la URL de la pestaña activa.");
     }
 });
+
 //BOTON PARA COPIAR TEXTO.
 copyButton.addEventListener("click", () => {
     const textToCopy = currentUrlElement.textContent; //Obtiene el elemento del tag <a>
@@ -68,4 +73,11 @@ function downloadOption() {
 
     enlaceDescarga.click();
     console.log("Código QR descargado.")
+}
+
+function truncateUrl(url, maxLength) {
+    if (url.length > maxLength) {
+        return url.substring(0, maxLength) + "...";
+    }
+    return url;
 }
