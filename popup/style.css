@@ -35,23 +35,3 @@
     -ms-transition: opacity 500ms;
     transition: opacity 500ms;
 }
-
-#QrBox {
-    width: 250px;
-    border-radius: 5px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s;
-}
-
-#QrBox img {
-    width: 100%;
-    padding: 10px;
-    padding-right: 15px;
-}
-
-#QrBox.show-img {
-    max-height: 300px;
-    margin: 10px auto;
-    border: 1px #d1d1d1
-}
