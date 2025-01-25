@@ -1,38 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-}
-
-.qrImage {
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: 200px;
-}
-
-.hyperlink {
-    color: blue;
-}
-
-.actions {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.actions button:hover {
-    background-color: #0056b3;
-}
-
 .d-btn {
     background-color: DodgerBlue;
     border: none;
