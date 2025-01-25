@@ -52,3 +52,14 @@
     max-height: 300px;
     margin: 10px auto;
 }
+
+#qrCodeButton {
+    background-color: dodgerblue;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+#qrCodeButton:hover {
+    background-color: royalblue;
+}
