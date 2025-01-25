@@ -68,10 +68,11 @@
 }
 
 #copyButton {
-    top: 50%;
-    left: 50%;
+    text-align: center;
     background-color: dodgerblue;
     color: white;
+    border: none;
+    padding: 6px 6px;
 }
 
 #copyButton:hover {
