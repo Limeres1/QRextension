@@ -1,79 +1,114 @@
-.d-btn {
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 20px;
-    width: 100%;
-}
-
-.d-btn:hover {
-    background-color: royalblue;
-}
-
-.div-imagen {
-    display: inline-block;
-    position: relative;
-}
-
-.div-imagen>div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    padding: 10px;
+/* Estilos generales */
+body {
+    font-family: 'Gothic A1', sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
     margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
-.desvanecer:hover {
-    opacity: 0.07;
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
-    -ms-transition: opacity 500ms;
-    transition: opacity 500ms;
-}
-
-#QrBox {
-    width: 250px;
-    border-radius: 5px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s;
-}
-
-#QrBox img {
+.container {
     width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
-#QrBox.show-img {
-    max-height: 300px;
-    margin: 10px auto;
-}
-
+/* Estilos para el botón GENERATE */
 #qrCodeButton {
-    background-color: dodgerblue;
     width: 100%;
-    color: white;
+    padding: 15px;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #666;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 18px;
-    border: none;
-    padding: 6px 18px;
+    transition: background-color 0.3s ease;
 }
 
 #qrCodeButton:hover {
-    background-color: royalblue;
+    background-color: #444;
 }
 
+/* Estilos para la imagen QR */
+#qrBox {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#qrBox.show {
+    opacity: 1;
+}
+
+#qrImage {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Estilos para el hipervínculo */
+.hyperlink {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.hyperlink:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el botón COPY */
 #copyButton {
-    background-color: dodgerblue;
-    color: white;
-    border: none;
-    padding: 6px 6px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #e0e0e0;
+    border: 2px solid #666;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px auto;
+    display: block;
 }
 
 #copyButton:hover {
-    background-color: royalblue;
+    background-color: #666;
+}
+
+/* Estilos para el botón DOWNLOAD */
+.d-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #666;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+}
+
+.d-btn::after {
+    content: '↓';
+    margin-left: 10px;
+}
+
+.d-btn:hover {
+    background-color: #444;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }

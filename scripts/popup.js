@@ -81,3 +81,8 @@ function truncateUrl(url, maxLength) {
     }
     return url;
 }
+
+document.getElementById('qrCodeButton').addEventListener('click', function () {
+    const qrBox = document.getElementById('qrBox');
+    qrBox.classList.add('show');
+});
