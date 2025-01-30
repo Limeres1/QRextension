@@ -5,6 +5,7 @@ const qrBox = document.getElementById("qrBox");
 let currentUrl = ""; // Variable global para almacenar la URL
 const currentUrlElement = document.getElementById("currentUrl");
 const downloadButton = document.getElementById("download-button");
+const container = document.querySelector('.container');
 let flag = false;
 
 
@@ -84,5 +85,6 @@ function truncateUrl(url, maxLength) {
 
 document.getElementById('qrCodeButton').addEventListener('click', function () {
     const qrBox = document.getElementById('qrBox');
-    qrBox.classList.add('show');
+    qrBox.style.display = 'block';
+    container.style.height = 'auto';
 });
