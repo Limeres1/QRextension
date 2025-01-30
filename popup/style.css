@@ -47,7 +47,8 @@ body {
 #qrBox {
     display: none;
     /* Ocultar inicialmente */
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #qrImage {
