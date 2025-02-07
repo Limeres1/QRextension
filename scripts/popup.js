@@ -13,14 +13,14 @@ let flag = false;
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs.length > 0) {
         currentUrl = tabs[0].url; // Asignar la URL a la variable global
-        console.log("URL actual:", currentUrl);
+        console.log("URL:", currentUrl);
 
         // Truncar la URL si es demasiado larga
         const truncatedUrl = truncateUrl(currentUrl, 50); // Cambia 50 por el número de caracteres máximo
         document.getElementById("currentUrl").textContent = truncatedUrl; // Mostrar URL truncada
         document.getElementById("currentUrl").title = currentUrl; // Muestra la URL completa al pasar el mouse
     } else {
-        console.error("No se pudo obtener la URL de la pestaña activa.");
+        console.error("The URL of the active tab could not be obtained.");
     }
 });
 
@@ -32,11 +32,11 @@ copyButton.addEventListener("click", () => {
 
     navigator.clipboard.writeText(textToCopy)
         .then(() => {
-            console.log("Texto copiado al portapapeles:", textToCopy);
-            alert("¡Texto copiado al portapapeles!");
+            console.log("Text copied to clipboard:", textToCopy);
+            alert("Text copied to clipboard!");
         })
         .catch((err) => {
-            console.error("Error al copiar el texto:", err);
+            console.error("Error when copying text:", err);
         });
 });
 
@@ -62,8 +62,8 @@ downloadButton.addEventListener("click", () => {
         downloadOption();
     }
     else {
-        console.error("No es posible descargar el código QR.");
-        alert("Genera el código QR antes de su descarga.")
+        console.error("It is not possible to download the QR code.");
+        alert("Generate the QR code before downloading it.")
     }
 });
 
@@ -73,7 +73,7 @@ function downloadOption() {
     enlaceDescarga.download = "QrCode.png";
 
     enlaceDescarga.click();
-    console.log("Código QR descargado.")
+    console.log("QR code downloaded.")
 }
 
 function truncateUrl(url, maxLength) {
