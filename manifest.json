@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "description": "My own Qr extension for web pages.",
     "icons": {
-        "16": "images/favicon.ico",
+        "16": "images/iconx16.png",
         "48": "images/icon-192.png",
         "128": "images/icon-512.png"
     },
